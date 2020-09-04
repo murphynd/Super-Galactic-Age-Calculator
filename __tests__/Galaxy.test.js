@@ -33,7 +33,6 @@ describe("Galaxy", () => {
     myGalaxy.addPlanet(Venus);
     myGalaxy.findPlanet("Venus");
     expect(myGalaxy.findPlanet("Venus")).toEqual({
-      lifeExp: 0,
       earthYears: 0.62,
       humanYears: 0,
       planet: "Venus",
@@ -45,7 +44,6 @@ describe("Galaxy", () => {
     myGalaxy.addPlanet(Venus);
     myGalaxy.addHumanAge("Venus", 30);
     expect(myGalaxy.findPlanet("Venus")).toEqual({
-      lifeExp: 0,
       earthYears: 0.62,
       humanYears: 18,
       planet: "Venus",
