@@ -62,8 +62,8 @@ describe("Galaxy", () => {
     myGalaxy.addPlanet(Mars);
     myGalaxy.addPlanet(Mercury);
     myGalaxy.addPlanet(Venus);
-    myGalaxy.lifeExp("Venus", 30, 72);
-    expect(myGalaxy.lifeExp("Venus", 30, 72)).toEqual("you are alive!");
+    myGalaxy.lifeExp("Mars", 15, 72);
+    expect(myGalaxy.lifeExp("Mars", 15, 72)).toEqual("you are alive!");
   });
   test("This will take an input of life expentancy and tell the user if they would still be alive.", () => {
     myGalaxy.addPlanet(Mars);
