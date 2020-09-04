@@ -41,14 +41,32 @@ Output:1.88(mars time) * 30 (my age) = 56.4 (years on earth)
 
 ```
 Spec:"create class Galaxy to hold array of multiple planets"
-input: myGalexy = new Galexy
-Output:myGalexy[]
+input: myGalaxy = new Galaxy
+Output:myGalaxy[]
 ```
 
 ```
-Spec:"create method for class Galaxy to add planets
+Spec:"create method for class Galaxy to add planets"
 input:myGalaxy.addPlanet(planet)
 Output:myGalaxy.planets = [planet,planet2,planet3]
+```
+
+```
+Spec:""
+input:
+Output:
+```
+
+```
+Spec:""
+input:
+Output:
+```
+
+```
+Spec:""
+input:
+Output:
 ```
 
 ## Setup/Installation Requirements
