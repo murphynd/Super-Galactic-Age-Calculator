@@ -57,8 +57,9 @@ export default class Galaxy {
       if (this.planets[i].planet == planet) {
         this.planets[i].humanYears = Math.trunc((age *= this.planets[i].earthYears));
         if (this.planets[i].humanYears < life) {
-          return "you are alive at the ripe age of", this.planets[i].humanYears;
-        } else return "you should be dead at the ripe age of", (this.planets[i].humanYears -= life);
+          return "you are alive at the ripe age of" + this.planets[i].humanYears;
+        } else
+          return "you should be dead at the ripe age of" + (this.planets[i].humanYears -= life);
       }
       return "not in the Galaxy";
     }

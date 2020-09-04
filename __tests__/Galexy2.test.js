@@ -44,19 +44,23 @@ describe("Galaxy", () => {
     myGalaxy.lifeExp("Mars", 15, 72);
     expect(myGalaxy.lifeExp("Mars", 15, 72)).toEqual("you are alive!");
   });
-  test("This will take an input of life expentancy and tell the user if they would still be alive.", () => {
+  test("This will take an input of life expentancy and tell the user if they are dead.", () => {
     myGalaxy.lifeExp("Mars", 200, 72);
     expect(myGalaxy.lifeExp("Mars", 200, 72)).toEqual(
       "you should be dead but I guess space is treating you well."
     );
   });
-  test("This will take an input of life expentancy and tell the user if they would still be alive.", () => {
+  test("This will take an input wrong planet and tell user it is not in the Galaxy", () => {
     myGalaxy.lifeExp("Pluto", 200, 72);
     expect(myGalaxy.lifeExp("Pluto", 200, 72)).toEqual("not in the Galaxy");
   });
 
-  test("This will take an input of life expentancy and tell the user if they would still be alive.", () => {
+  test("This will take an input of life expentancy and tell the user how many years past life expectancy they have lived", () => {
     myGalaxy.Dead("Mars", 200, 72);
     expect(myGalaxy.Dead("Mars", 200, 72)).toEqual(304);
+  });
+  test("This will take an input of life expentancy and tell the user how many years past life expectancy they have lived with a string", () => {
+    myGalaxy.galactic("Mars", 200, 72);
+    expect(myGalaxy.galactic("Mars", 200, 72)).toEqual("you should be dead at the ripe age of" 304);
   });
 });
