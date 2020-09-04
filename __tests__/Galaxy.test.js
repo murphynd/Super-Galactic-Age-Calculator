@@ -13,7 +13,6 @@ describe("Galaxy", () => {
     Mercury = new Planet("Mercury", 0.24);
     Venus = new Planet("Venus", 0.62);
   });
-
   test("create class Galaxy to hold array of multiple planets", () => {
     expect(myGalaxy.planets).toEqual([]);
   });
@@ -26,5 +25,17 @@ describe("Galaxy", () => {
     myGalaxy.addPlanet(Mercury);
     myGalaxy.addPlanet(Venus);
     expect(myGalaxy.planets).toEqual([Mars, Mercury, Venus]);
+    expect(myGalaxy.planets).toHaveLength(3);
+  });
+  test("create a method for class galexy to search planets for humanYears.", () => {
+    myGalaxy.addPlanet(Mars);
+    myGalaxy.addPlanet(Mercury);
+    myGalaxy.addPlanet(Venus);
+    myGalaxy.findPlanet("Venus");
+    expect(myGalaxy.findPlanet("Venus")).toEqual({
+      earthYears: 0.62,
+      humanYears: 0,
+      planet: "Venus",
+    });
   });
 });

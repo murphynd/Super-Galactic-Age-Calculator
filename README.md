@@ -52,15 +52,15 @@ Output:myGalaxy.planets = [planet,planet2,planet3]
 ```
 
 ```
-Spec:""
+Spec:"this will test if planet objects register in galexy array"
 input:
 Output:
 ```
 
 ```
-Spec:""
-input:
-Output:
+Spec:"create a method for class galexy to search planets for humanYears."
+input:myGalexy.find(Mars)
+Output:mars.humanyears = 0
 ```
 
 ```
