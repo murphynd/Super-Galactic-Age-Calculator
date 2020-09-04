@@ -15,15 +15,17 @@ export default class Galaxy {
     }
   }
   addHumanAge(planet, numinput) {
-    let num = numinput;
+    let num = parseFloat(numinput);
+
+    console.log(num);
     for (let i = 0; i < this.planets.length; i++) {
       if (this.planets[i]) {
         if (this.planets[i].planet == planet) {
-          this.planets[i].humanYears = Math.trunc((num *= this.earthYears));
+          this.planets[i].humanYears = Math.trunc((num *= this.planets[i].earthYears));
+          console.log(num);
           return this.planets[i];
         }
       }
     }
-    console.log(this.planets[i].humanYears);
   }
 }
