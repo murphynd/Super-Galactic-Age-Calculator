@@ -34,9 +34,9 @@ Output:this.planet = mars, this.earthYears = 1.88
 ```
 
 ```
-Spec:
-input:
-Output:
+Spec: "Create a method called Age in class planet that multiplys age by earthYears"
+input: mars.age(30)
+Output:1.88(mars time) * 30 (my age) = 56.4 (years on earth)
 ```
 
 ```
