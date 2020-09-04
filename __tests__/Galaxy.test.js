@@ -33,6 +33,7 @@ describe("Galaxy", () => {
     myGalaxy.addPlanet(Venus);
     myGalaxy.findPlanet("Venus");
     expect(myGalaxy.findPlanet("Venus")).toEqual({
+      lifeExp: 0,
       earthYears: 0.62,
       humanYears: 0,
       planet: "Venus",
@@ -44,6 +45,7 @@ describe("Galaxy", () => {
     myGalaxy.addPlanet(Venus);
     myGalaxy.addHumanAge("Venus", 30);
     expect(myGalaxy.findPlanet("Venus")).toEqual({
+      lifeExp: 0,
       earthYears: 0.62,
       humanYears: 18,
       planet: "Venus",
@@ -55,5 +57,28 @@ describe("Galaxy", () => {
     myGalaxy.addPlanet(Venus);
     myGalaxy.addHumanAge("pluto", 30);
     expect(myGalaxy.findPlanet("pluto")).toEqual("not in the Galaxy");
+  });
+  test("This will take an input of life expentancy and tell the user if they would still be alive.", () => {
+    myGalaxy.addPlanet(Mars);
+    myGalaxy.addPlanet(Mercury);
+    myGalaxy.addPlanet(Venus);
+    myGalaxy.lifeExp("Venus", 30, 72);
+    expect(myGalaxy.lifeExp("Venus", 30, 72)).toEqual("you are alive!");
+  });
+  test("This will take an input of life expentancy and tell the user if they would still be alive.", () => {
+    myGalaxy.addPlanet(Mars);
+    myGalaxy.addPlanet(Mercury);
+    myGalaxy.addPlanet(Venus);
+    myGalaxy.lifeExp("Mars", 200, 72);
+    expect(myGalaxy.lifeExp("Mars", 200, 72)).toEqual(
+      "you should be dead but I guess space is treating you well."
+    );
+  });
+  test("This will take an input of life expentancy and tell the user if they would still be alive.", () => {
+    myGalaxy.addPlanet(Mars);
+    myGalaxy.addPlanet(Mercury);
+    myGalaxy.addPlanet(Venus);
+    myGalaxy.lifeExp("Pluto", 200, 72);
+    expect(myGalaxy.lifeExp("Pluto", 200, 72)).toEqual("not in the Galaxy");
   });
 });
