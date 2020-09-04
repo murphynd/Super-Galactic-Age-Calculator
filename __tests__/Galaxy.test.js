@@ -81,4 +81,12 @@ describe("Galaxy", () => {
     myGalaxy.lifeExp("Pluto", 200, 72);
     expect(myGalaxy.lifeExp("Pluto", 200, 72)).toEqual("not in the Galaxy");
   });
+
+  test("This will take an input of life expentancy and tell the user if they would still be alive.", () => {
+    myGalaxy.addPlanet(Mars);
+    myGalaxy.addPlanet(Mercury);
+    myGalaxy.addPlanet(Venus);
+    myGalaxy.Dead("Mars", 200, 72);
+    expect(myGalaxy.Dead("Mars", 200, 72)).toEqual(304);
+  });
 });
