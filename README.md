@@ -36,7 +36,7 @@ Output:this.planet = mars, this.earthYears = 1.88
 ```
 Spec: "Create a method called Age in class planet that multiplys age by earthYears"
 input: mars.age(30)
-Output:1.88(mars time) * 30 (my age) = 56.4 (years on earth)
+Output:1.88(mars time) * 30 (my age) = 56 (years on earth)
 ```
 
 ```
@@ -53,6 +53,29 @@ Output:myGalaxy.planets = [planet,planet2,planet3]
 
 ```
 Spec:"this will test if planet objects register in galexy array"
+input:
+myGalaxy.addPlanet(Mars);
+ myGalaxy.addPlanet(Mercury);
+  myGalaxy.addPlanet(Venus);
+Output:myGalexy.planets= [Mars, Mercury, Venus]
+```
+
+```
+Spec:"create a method for class of galaxy to search planets"
+input:myGalexy.findplanet("venus")
+Output:venus Planet object
+```
+
+```
+Spec:"add inputted age to update all of the planets in Galaxy Array"
+input: I am 30 years old
+Output: Mars.humanYears = 56
+Venus.humanYears = 18
+Mercury.humanYears = 7
+```
+
+```
+Spec:""
 input:
 Output:
 ```
